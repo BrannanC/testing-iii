@@ -1,9 +1,11 @@
 import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
+import { render, fireEvent, cleanup } from 'react-testing-library';
 import renderer from 'react-test-renderer';
 import 'jest-dom/extend-expect';
 
 import Dashboard from './Dashboard';
+
+afterEach(cleanup);
 
 describe('Dashboard', () => {
     it('Matches snapshot', () => {
